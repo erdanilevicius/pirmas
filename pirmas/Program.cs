@@ -18,12 +18,17 @@ namespace Uzd
            Console.WriteLine("Ats.: " + myObj.c);  // nepasiima kintamuju
            Console.WriteLine("Prasukta: " +myObj.i + " kartus.");
 
+
+            Console.WriteLine("Skaiciaus " + myObj.prad + " faktorialas yra : " + myObj.rezultatas);
+            Console.WriteLine("");
+         
+
             DateTime start = DateTime.Now;
             Thread.Sleep(0);
             DateTime end = DateTime.Now;
 
             TimeSpan ts = (end - start);
-            Console.WriteLine("Praejo:  " + ts.TotalMilliseconds + " ms");
+            Console.WriteLine("Praejo: " + ts.TotalMilliseconds + " ms");
             while (true) ;
 
         }

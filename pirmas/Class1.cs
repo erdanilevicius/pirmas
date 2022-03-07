@@ -6,27 +6,61 @@ using System.Threading.Tasks;
 
 namespace Uzd
 {
-    internal class Uzduotis
-    {
 
-        public double c = 0;
-        public int i = 0;
+    public class Cons {
+
+        public double a = 1; // 1 skaic 
+        public double b = 2; // 2 skaic
+        public int prad = 5;
+        public Cons()
+        {
+
+        }
+    
+
+    
+    
+        }
+
+
+
+    internal class Uzduotis : Cons
+    {
+        public double c;
+        public int i;
+        public double rezultatas;
+
 
         public void Daryti()
         {
 
             double daug = Math.Pow(10, 15);
-            double a = 1; // 1 skaic 
-            double b = 2; // 2 skaic
+
+            rezultatas = prad;
+           
             while (c <= daug)
             {
-                c = a * b;
+                this.c = a * b;
                 a = b;
                 b = c;
                 i++;
             }
 
+            for (int f = prad; f > 1; f--) {
+
+                rezultatas = rezultatas * (f - 1);
+            
+            }
+
+
+
         }
+
+        
+
+
+
+
     }
 
 }
