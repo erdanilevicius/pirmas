@@ -1,21 +1,30 @@
 ﻿// See https://aka.ms/new-console-template for more information
 //nebūtina
 using System;
-using static Uzd1.uzduotis; // naudojama klases faile esanti klase
+//using static Uzduotis; // naudojama klases faile esanti klase
 //nebūtina
 namespace Uzd
 {
-    class Programa
+    internal class Programa
     {
-        public static void Main(string[] args)
+        static void Main(string[] args)
         {
 
-            Uzd1.uzduotis myObj = new Uzd1.uzduotis();
+           Uzduotis myObj = new Uzduotis();
+           myObj.Daryti();
 
-            daryti(); // kvieciama ir vykdoma funkcija daryti esanti "Class1" faile
+            //Daryti(); // kvieciama ir vykdoma funkcija daryti esanti "Class1" faile
 
-            Console.WriteLine("Ats.: " + myObj.c);  // nepasiima kintamuju
-            Console.WriteLine("Prasukta: " +myObj.i + " kartus.");
+           Console.WriteLine("Ats.: " + myObj.c);  // nepasiima kintamuju
+           Console.WriteLine("Prasukta: " +myObj.i + " kartus.");
+
+            DateTime start = DateTime.Now;
+            Thread.Sleep(0);
+            DateTime end = DateTime.Now;
+
+            TimeSpan ts = (end - start);
+            Console.WriteLine("Praejo:  " + ts.TotalMilliseconds + " ms");
+            while (true) ;
 
         }
 
